@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Twiddle/static/css/main.46ab36d2.css",
+    "main.js": "/Twiddle/static/js/main.264012d9.js",
+    "static/js/453.00ae8aa6.chunk.js": "/Twiddle/static/js/453.00ae8aa6.chunk.js",
+    "static/media/DiscX.png": "/Twiddle/static/media/DiscX.1b0c7dffd9a44b7209fc.png",
+    "static/media/DiscCorrect.png": "/Twiddle/static/media/DiscCorrect.f3f93e58b298534cdba7.png",
+    "static/media/DiscDown.png": "/Twiddle/static/media/DiscDown.d7bf894546f315037470.png",
+    "static/media/DiscUp.png": "/Twiddle/static/media/DiscUp.d36a389dd298d259ffac.png",
+    "index.html": "/Twiddle/index.html",
+    "main.46ab36d2.css.map": "/Twiddle/static/css/main.46ab36d2.css.map",
+    "main.264012d9.js.map": "/Twiddle/static/js/main.264012d9.js.map",
+    "453.00ae8aa6.chunk.js.map": "/Twiddle/static/js/453.00ae8aa6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46ab36d2.css",
+    "static/js/main.264012d9.js"
+  ]
+}
