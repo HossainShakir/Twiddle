@@ -1,0 +1,181 @@
+.App {
+    text-align: center;
+  }
+
+  .header-row {
+    display: grid;
+    grid-template-columns: 158px 1fr 1fr 1fr 1fr; /* Match this with guess-row */
+    margin-bottom: 10px;
+    gap: 34px; /* Space between columns */
+    font-weight: bold;
+  }
+  
+  .header-item {
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .guess-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+  
+  .guess-name {
+    width: 120px;
+    color: #3498db;
+    text-decoration: underline;
+    margin-left: 0;
+  }
+  
+  .target-loomian {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .loomian-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-container {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .hint-icon {
+    width: 100px;
+    height: 100px;
+    margin-left: 0px;
+  }
+
+  .guess-icon {
+    width: 70px;
+    height: 50px;
+  }
+  
+  .loomian-dropdown {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+  
+  .loomian-dropdown input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .loomian-dropdown button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .loomian-dropdown button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dropdown-name {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .dropdown-subdetails {
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .dropdown-subdetails span {
+    margin-right: 10px;
+  }
+  
+  .guess-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .guess-button:hover {
+    background-color: #e0e0e0;
+  }
+
+  .tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    display: none;
+    z-index: 1000;
+    white-space: nowrap;
+  }
+  
+  .tooltip-show {
+    display: block;
+  }
+
+  .guess-name:hover .tooltip {
+    display: block;
+  }
+
+  .hint-container {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+  }
+  
+  .hint-value {
+    color: #555;
+  }
