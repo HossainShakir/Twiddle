@@ -6,6 +6,7 @@ const Hint = ({ status }) => {
     wrong: require('../assets/icons/DiscX.png'),
     higher: require('../assets/icons/DiscUp.png'),
     lower: require('../assets/icons/DiscDown.png'),
+    switch: require('../assets/icons/DiscSwitch.png'),
   };
 
   return <img src={icons[status]} alt={status} className="hint-icon" />;

@@ -30,6 +30,11 @@ const LoomianDropdown = ({ currentGuess, setCurrentGuess }) => {
     setIsOpen(false);
   };
 
+  const calculateBST = (loomian) => {
+    const { hp, energy, attack, defense, rattack, rdefense, speed } = loomian.stats;
+    return hp + energy + attack + defense + rattack + rdefense + speed;
+  };
+
   return (
     <div className="loomian-dropdown" ref={dropdownRef}>
       <input
@@ -47,7 +52,8 @@ const LoomianDropdown = ({ currentGuess, setCurrentGuess }) => {
               <div className="dropdown-subdetails">
                 <span>{loomian.primaryType} {loomian.secondaryType !== 'None' ? `/${loomian.secondaryType}` : ''},</span>
                 <span>{loomian.heightcm} cm,</span>
-                <span>{loomian.weightkg} kg</span>
+                <span>{loomian.weightkg} kg,</span>
+                <span>{calculateBST(loomian)} BST</span>
               </div>
             </li>
           ))}
