@@ -712,7 +712,7 @@ export const loomiansData = [
         secretAbility: 'Coursing Venom',
         weightkg: 24,
         heightcm: 94 },
-    { name: 'Antsee', primaryType: 'Bug', secondaryType: 'Plant', icon: require('../assets/icons/antsee.png'),
+    { name: 'Antsee', primaryType: 'Plant', secondaryType: 'Bug', icon: require('../assets/icons/antsee.png'),
         moves: [
             "Dawdle", "Gnaw", "Bug Bite", "Burrow", "Take Root", "Pine Shot", "Pestilence",
             "Pester", "Parasitize", "Nature's Force", "Wonder Herb", "Energy Surge",
@@ -733,7 +733,7 @@ export const loomiansData = [
         secretAbility: 'Drainage',
         weightkg: 5.4,
         heightcm: 38.1 },
-    { name: 'Florant', primaryType: 'Bug', secondaryType: 'Plant', icon: require('../assets/icons/florant.png'),
+    { name: 'Florant', primaryType: 'Plant', secondaryType: 'Bug', icon: require('../assets/icons/florant.png'),
         moves: [
             "Dawdle", "Gnaw", "Bug Bite", "Burrow", "Take Root", "Pine Shot", "Pestilence",
             "Pester", "Parasitize", "Nature's Force", "Wonder Herb", "Energy Surge",
@@ -755,7 +755,7 @@ export const loomiansData = [
         secretAbility: 'Drainage',
         weightkg: 74,
         heightcm: 111.76 },
-    { name: 'Florant-Flychomp', primaryType: 'Bug', secondaryType: 'Plant', icon: require('../assets/icons/florant-flychomp.png'),
+    { name: 'Florant-Flychomp', primaryType: 'Plant', secondaryType: 'Bug', icon: require('../assets/icons/florant-flychomp.png'),
         moves: [
             "Dawdle", "Gnaw", "Bug Bite", "Burrow", "Take Root", "Pine Shot", "Pestilence",
             "Pester", "Parasitize", "Nature's Force", "Wonder Herb", "Energy Surge",

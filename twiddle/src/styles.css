@@ -1,6 +1,10 @@
 .App {
-    text-align: center;
-  }
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  height: 100vh; 
+  padding: 20px;
+}
 
   .header-row {
     display: grid;
@@ -254,7 +258,7 @@
   }
 
   .results-button {
-    background-color: #ffc107; /* Different color for the results button */
+    background-color: #ffc107; 
   }
 
   .results-button:hover {
@@ -266,7 +270,7 @@
   }
 
   .close-overlay-button {
-    background-color: #dc3545; /* Red for close button */
+    background-color: #dc3545; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -308,4 +312,60 @@
     text-align: center;
   }
   
+  .type-badge {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #f0f0f0; 
+    text-align: center;
+    transition: filter 0.3s ease;
+  }
   
+  .type-badge img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .type-badge-container {
+    margin-top: 20px;
+    width: 800px;
+  }
+
+  .header-container {
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .header-container img {
+    width: 80px; 
+    height: auto; 
+  }
+
+  .App h1 {
+    font-family: 'Arial', sans-serif; 
+    font-size: 3rem; 
+    font-weight: bold; 
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    margin: 0; 
+    padding: 20px; 
+    background: linear-gradient(135deg, #A4D9BC, #DE8998);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
+  .App h1::before {
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%; 
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 8px; 
+    z-index: -1; 
+  }

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import loomiansData from '../data/loomians';
 import GuessRow from './GuessRow';
 import LoomianDropdown from './LoomianDropdown';
+import TypeBadge from './TypeBadge';
+import { typeAttributes } from './colors';
 import '../styles.css';
 
 const GameBoard = () => {
@@ -13,6 +15,21 @@ const GameBoard = () => {
   const [shareResult, setShareResult] = useState('');
   const [overlayAnimation, setOverlayAnimation] = useState('');
   const [showResultsOverlay, setShowResultsOverlay] = useState(false);
+
+  const allTypes = Object.keys(typeAttributes);
+
+ const guessedTypes = guesses.flatMap(({ guess }) => {
+  const types = [];
+  if (guess.primaryType && !types.includes(guess.primaryType)) {
+    types.push(guess.primaryType);
+  }
+  if (guess.secondaryType && guess.secondaryType !== 'None' && !types.includes(guess.secondaryType)) {
+    types.push(guess.secondaryType);
+  }
+  return types;
+});
+
+console.log('Guessed Types:', guessedTypes);
 
   const handleGuess = () => {
     const guess = loomiansData.find(l => l.name.toLowerCase() === currentGuess.toLowerCase());
@@ -57,7 +74,6 @@ const GameBoard = () => {
       bst: compare(calculateBST(guess), calculateBST(target)),
     };
   };
-  
 
   const calculateBST = (loomian) => {
     const { hp, energy, attack, defense, rattack, rdefense, speed } = loomian.stats;
@@ -79,11 +95,11 @@ const GameBoard = () => {
   };
 
   const closeOverlay = () => {
-    setOverlayAnimation('fade-up'); // Start fade-up animation
+    setOverlayAnimation('fade-up'); 
     setTimeout(() => {
-      setShowResultsOverlay(false); // Hide the results button after animation completes
-      setOverlayAnimation(''); // Reset animation class
-    }, 500); // Adjust delay to match the duration of your fade-up animation
+      setShowResultsOverlay(false); 
+      setOverlayAnimation(''); 
+    }, 500); 
   };
 
   const generateShareResult = () => {
@@ -163,9 +179,20 @@ const GameBoard = () => {
           setOverlayAnimation('fade-down');
           setShowResultsOverlay(true);
         }}>
-          Results
+          See Results
         </button>
       )}
+
+      <div className="type-badge-container">
+        {allTypes.map(type => (
+          <TypeBadge
+            key={type}
+            type={type}
+            text={type}
+            style={guessedTypes.includes(type) ? { filter: 'brightness(0.25)' } : {}}
+          />
+        ))}
+      </div>
     </div>
   );
 };
