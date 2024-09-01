@@ -16,20 +16,20 @@ const GameBoard = () => {
   const [overlayAnimation, setOverlayAnimation] = useState('');
   const [showResultsOverlay, setShowResultsOverlay] = useState(false);
 
+  const guessesLeft = 7 - guesses.length;  // Calculate the remaining guesses
+
   const allTypes = Object.keys(typeAttributes);
 
- const guessedTypes = guesses.flatMap(({ guess }) => {
-  const types = [];
-  if (guess.primaryType && !types.includes(guess.primaryType)) {
-    types.push(guess.primaryType);
-  }
-  if (guess.secondaryType && guess.secondaryType !== 'None' && !types.includes(guess.secondaryType)) {
-    types.push(guess.secondaryType);
-  }
-  return types;
-});
-
-console.log('Guessed Types:', guessedTypes);
+  const guessedTypes = guesses.flatMap(({ guess }) => {
+    const types = [];
+    if (guess.primaryType && !types.includes(guess.primaryType)) {
+      types.push(guess.primaryType);
+    }
+    if (guess.secondaryType && guess.secondaryType !== 'None' && !types.includes(guess.secondaryType)) {
+      types.push(guess.secondaryType);
+    }
+    return types;
+  });
 
   const handleGuess = () => {
     const guess = loomiansData.find(l => l.name.toLowerCase() === currentGuess.toLowerCase());
@@ -125,6 +125,10 @@ console.log('Guessed Types:', guessedTypes);
 
   return (
     <div className="game-board">
+      <div className="guesses-left">
+        Guesses Left: {guessesLeft}
+      </div>
+
       {guesses.length > 0 && (
         <div className={`header-row ${showHeaderAnimation ? 'fade-down' : ''}`}>
           <div className="header-item"></div>
@@ -152,7 +156,7 @@ console.log('Guessed Types:', guessedTypes);
       {showResultsOverlay && (
         <div className={`overlay ${overlayAnimation}`}>
           <div className="overlay-content">
-          <button className="close-overlay-button" onClick={closeOverlay}>Close</button>
+            <button className="close-overlay-button" onClick={closeOverlay}>Close</button>
             <h2>The Loomian to be guessed was:</h2>
             <div className="loomian-details">
               <img src={targetLoomian.icon} alt={targetLoomian.name} />

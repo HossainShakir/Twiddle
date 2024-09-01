@@ -1,9 +1,42 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   display: flex; 
   flex-direction: column; 
   align-items: center;
-  height: 100vh; 
+  height: 100%; 
   padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.App.dark-mode {
+  background-color: #222222;
+  color: white;
+  height: 100%;
+}
+
+.App.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: inherit;
+}
+
+.theme-toggle:focus {
+  outline: none;
 }
 
   .header-row {
@@ -23,6 +56,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 110vh;
+    width: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }  
+
+  .guesses-left {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 20px;
   }
   
   .guess-row {
@@ -78,6 +122,9 @@
     border: 1px solid #ccc;
     border-right: none;
     border-radius: 4px 0 0 4px;
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .loomian-dropdown button {
@@ -86,12 +133,14 @@
     border: 1px solid #ccc;
     border-left: none;
     border-radius: 0 4px 4px 0;
-    background-color: #f0f0f0;
+    background-color: var(--button-bg);
+    color: var(--button-text);
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .loomian-dropdown button:hover {
-    background-color: #e0e0e0;
+    background-color: var(--button-hover-bg);
   }
   
   .dropdown-menu {
@@ -99,14 +148,15 @@
     top: 100%;
     left: 0;
     right: 0;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    border: 1px solid var(--dropdown-border);
+    background-color: var(--dropdown-bg);
     max-height: 200px;
     overflow-y: auto;
     z-index: 1000;
     padding: 0;
     margin: 0;
     list-style: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
   
   .dropdown-item {
@@ -114,10 +164,13 @@
     flex-direction: column;
     padding: 5px 10px;
     cursor: pointer;
+    background-color: var(--dropdown-item-bg);
+    color: var(--dropdown-item-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .dropdown-item:hover {
-    background-color: #f0f0f0;
+    background-color: var(--dropdown-item-hover-bg);
   }
   
   .dropdown-name {
@@ -128,7 +181,7 @@
   
   .dropdown-subdetails {
     font-size: 0.8em;
-    color: #666;
+    color: var(--dropdown-subdetails-text);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -139,6 +192,37 @@
   .dropdown-subdetails span {
     margin-right: 10px;
   }
+  
+  /* Light Mode Variables */
+  .App.light-mode {
+    --input-bg: #ffffff;
+    --input-text: #000000;
+    --button-bg: #f0f0f0;
+    --button-text: #000000;
+    --button-hover-bg: #e0e0e0;
+    --dropdown-bg: #ffffff;
+    --dropdown-border: #ccc;
+    --dropdown-item-bg: #ffffff;
+    --dropdown-item-text: #000000;
+    --dropdown-item-hover-bg: #e0e0e0;
+    --dropdown-subdetails-text: #666666;
+  }
+  
+  /* Dark Mode Variables */
+  .App.dark-mode {
+    --input-bg: #333333;
+    --input-text: #ffffff;
+    --button-bg: #555555;
+    --button-text: #ffffff;
+    --button-hover-bg: #444444;
+    --dropdown-bg: #333333;
+    --dropdown-border: #000000;
+    --dropdown-item-bg: #333333;
+    --dropdown-item-text: #ffffff;
+    --dropdown-item-hover-bg: #444444;
+    --dropdown-subdetails-text: #cccccc;
+  }
+  
   
   .guess-button {
     padding: 10px 20px;
@@ -221,8 +305,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    height: 110%;
+    background: var(--overlay-bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -230,11 +314,12 @@
   }
   
   .overlay-content {
-    background: white;
+    background: var(--overlay-content-bg);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px var(--overlay-shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   
   .loomian-details {
@@ -251,26 +336,27 @@
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #007bff;
+    background-color: var(--button-bg);
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
-
+  
   .results-button {
-    background-color: #ffc107; 
+    background-color: var(--results-button-bg); 
   }
-
+  
   .results-button:hover {
-    background-color: #e0a800;
+    background-color: var(--results-button-hover-bg);
   }
-
+  
   .new-game-button:hover, .share-button:hover, .results-button:hover {
-    background-color: #0056b3;
+    background-color: var(--button-hover-bg);
   }
-
+  
   .close-overlay-button {
-    background-color: #dc3545; 
+    background-color: var(--close-button-bg); 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -280,36 +366,58 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    transition: background-color 0.3s ease;
   }
-
-  .close-overlay-button:hover {
-    background-color: #c82333;
-  }
-
   
-  .new-game-button:hover, .share-button:hover {
-    background-color: #0056b3;
+  .close-overlay-button:hover {
+    background-color: var(--close-button-hover-bg);
   }
   
   .share-button {
     margin-left: 10px;
-    background-color: #28a745;
+    background-color: var(--share-button-bg);
   }
   
   .share-button:hover {
-    background-color: #218838;
+    background-color: var(--share-button-hover-bg);
   }
   
   .share-result {
     margin-top: 20px;
     text-align: left;
     font-family: monospace;
+    color: var(--share-result-text);
+  }
+
+  .App.light-mode {
+    --overlay-bg: rgba(0, 0, 0, 0.7);
+    --overlay-content-bg: white;
+    --overlay-shadow: rgba(0, 0, 0, 0.2);
+    --button-bg: #007bff;
+    --button-hover-bg: #0056b3;
+    --results-button-bg: #ffc107;
+    --results-button-hover-bg: #e0a800;
+    --close-button-bg: #dc3545;
+    --close-button-hover-bg: #c82333;
+    --share-button-bg: #28a745;
+    --share-button-hover-bg: #218838;
+    --share-result-text: darkgreen;
   }
   
-  .share-result p {
-    color: darkgreen;
-    font-weight: bold;
-    text-align: center;
+  /* Dark Mode Variables */
+  .App.dark-mode {
+    --overlay-bg: rgba(0, 0, 0, 0.85);
+    --overlay-content-bg: #333333;
+    --overlay-shadow: rgba(255, 255, 255, 0.1);
+    --button-bg: #0062cc;
+    --button-hover-bg: #004085;
+    --results-button-bg: #d39e00;
+    --results-button-hover-bg: #b38700;
+    --close-button-bg: #c82333;
+    --close-button-hover-bg: #bd2130;
+    --share-button-bg: #218838;
+    --share-button-hover-bg: #19692c;
+    --share-result-text: lightgreen;
   }
   
   .type-badge {
