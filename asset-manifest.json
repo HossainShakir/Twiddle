@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Twiddle/static/css/main.4253c1e1.css",
-    "main.js": "/Twiddle/static/js/main.538a7089.js",
+    "main.css": "/Twiddle/static/css/main.f37a4cdc.css",
+    "main.js": "/Twiddle/static/js/main.6b761863.js",
     "static/js/453.00ae8aa6.chunk.js": "/Twiddle/static/js/453.00ae8aa6.chunk.js",
     "static/media/DiscX.png": "/Twiddle/static/media/DiscX.1b0c7dffd9a44b7209fc.png",
     "static/media/DiscCorrect.png": "/Twiddle/static/media/DiscCorrect.f3f93e58b298534cdba7.png",
@@ -11,12 +11,12 @@
     "static/media/Twittle-model.png": "/Twiddle/static/media/Twittle-model.facdeed6082b30a93cc9.png",
     "static/media/ikazune.png": "/Twiddle/static/media/ikazune.28cede64d768ef241261.png",
     "index.html": "/Twiddle/index.html",
-    "main.4253c1e1.css.map": "/Twiddle/static/css/main.4253c1e1.css.map",
-    "main.538a7089.js.map": "/Twiddle/static/js/main.538a7089.js.map",
+    "main.f37a4cdc.css.map": "/Twiddle/static/css/main.f37a4cdc.css.map",
+    "main.6b761863.js.map": "/Twiddle/static/js/main.6b761863.js.map",
     "453.00ae8aa6.chunk.js.map": "/Twiddle/static/js/453.00ae8aa6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4253c1e1.css",
-    "static/js/main.538a7089.js"
+    "static/css/main.f37a4cdc.css",
+    "static/js/main.6b761863.js"
   ]
 }
