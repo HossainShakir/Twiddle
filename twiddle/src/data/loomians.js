@@ -2852,6 +2852,27 @@ export const loomiansData = [
         secretAbility: 'Sweet Touch',
         weightkg: 40.4,
         heightcm: 129.5 },
+        { name: 'Hoganosh-Atomic', primaryType: 'Fire', secondaryType: 'None', icon: require('../assets/icons/hoganosh-atomic.png'),
+            moves: [
+                "Stare", "Singe", "Pounce", "Burn Up", "Chomp", "Headbutt", "Fire Slam", "Sharpen", "Body Slam",
+                "Mega Chomp", "Bait", "Baneful Bash", "Battle Chime", "Muck Buck", "Raging Tackle", "Venom Chomp",
+                "Bulk Up", "Dodge", "Ill Will", "Rejuvenate", "Fiery Fondant", "Spare", "Meltdown"
+            ],
+            stats: {
+                hp: 89,
+                energy: 93,
+                attack: 129,
+                defense: 95,
+                rattack: 67,
+                rdefense: 114,
+                speed: 61
+            },
+            gender: ['Male', 'Female'],
+            abilities: ['Gorge'],
+            secretAbility: '',
+            weightkg: 40.4,
+            heightcm: 129.5,
+            requiredItem: 'Noshburst' },
     { name: 'Mochibi', primaryType: 'Ice', secondaryType: 'None', icon: require('../assets/icons/mochibi.png'),
         moves: [
             "Strike", "Flurry", "Hop Kick", "Mind's Eye", "Snowdozer", "Tease", "Return to Sender", "Sleet Shot", 
@@ -5530,6 +5551,133 @@ export const loomiansData = [
             secretAbility: 'Hydrate',
             weightkg: 15,
             heightcm: 101.6 },
+            { name: 'Banooh', primaryType: 'Simple', secondaryType: 'None', icon: require('../assets/icons/banooh.png'),
+                moves: [
+                    "Chase Down", "Daydream", "Stare", "Spare", "Teamwork", "Stretch", "Headbutt", "Wonder Herb", "Tamp",
+                    "Body Slam", "Banana Split", "Coconut Bomb", "Raging Tackle", "Rogue Assault", "Scapegoat", "Barter",
+                    "Dodge"
+                ],
+                stats: {
+                    hp: 41,
+                    energy: 45,
+                    attack: 24,
+                    defense: 25,
+                    rattack: 24,
+                    rdefense: 25,
+                    speed: 66
+                },
+                gender: ['Male', 'Female'],
+                abilities: ['Shakedown', 'Assertive'],
+                secretAbility: 'Berserk',
+                weightkg: 3.6,
+                heightcm: 33 },
+            { name: 'Banokey', primaryType: 'Simple', secondaryType: 'Brawler', icon: require('../assets/icons/banokey.png'),
+                moves: [
+                    "Chase Down", "Daydream", "Stare", "Spare", "Teamwork", "Stretch", "Headbutt", "Wonder Herb", "Tamp",
+                    "Body Slam", "Banana Split", "Coconut Bomb", "Raging Tackle", "Rogue Assault", "Scapegoat", "Barter",
+                    "Dodge", "Banana Slam", "Brawn Boost", "Frost Punch", "Preemptive Strike", "Slap Down", "Icicle Trap",
+                    "Bulk Up", "Frost Beam"
+                ],
+                stats: {
+                    hp: 97,
+                    energy: 89,
+                    attack: 124,
+                    defense: 50,
+                    rattack: 74,
+                    rdefense: 50,
+                    speed: 96
+                },
+                gender: ['Male', 'Female'],
+                abilities: ['Shakedown', 'Assertive'],
+                secretAbility: 'Berserk',
+                weightkg: 16.8,
+                heightcm: 104.1 },
+            { name: 'Spirwix', primaryType: 'Fire', secondaryType: 'Spirit', icon: require('../assets/icons/spirwix.png'),
+                moves: [
+                    "Startle", "Singe", "Chase Down", "Burn Up", "Shine", "Pepper Burst", "Fade Away", "Provoke", "Gamma Pulse",
+                    "Tribute", "Spectral Burst", "Scapegoat", "Fire Breath", "Raging Flame", "Rant", "Bequeath",
+                    "Flare Blast", "Phantom Blast", "Tricky Tactics", "Dodge", "Fade Away", "Ill Will", "Peace of Mind",
+                    "Spare"
+                ],
+                stats: {
+                    hp: 40,
+                    energy: 61,
+                    attack: 29,
+                    defense: 50,
+                    rattack: 100,
+                    rdefense: 50,
+                    speed: 45
+                },
+                gender: ['Male', 'Female'],
+                abilities: ['Disenchant', 'Raging Fire'],
+                secretAbility: 'Devious',
+                weightkg: 2.3,
+                heightcm: 20.3 },
+            { name: 'Spirwix (Raging Fire)', primaryType: 'Fire', secondaryType: 'Spirit', icon: require('../assets/icons/spirwix.png'), specialTypeChart: 'RagingFire' },
+            { name: 'Malevowax', primaryType: 'Fire', secondaryType: 'Spirit', icon: require('../assets/icons/malevowax.png'),
+                moves: [
+                    "Startle", "Singe", "Chase Down", "Burn Up", "Shine", "Pepper Burst", "Fade Away", "Provoke", "Gamma Pulse",
+                    "Tribute", "Spectral Burst", "Scapegoat", "Fire Breath", "Raging Flame", "Rant", "Bequeath",
+                    "Flare Blast", "Phantom Blast", "Tricky Tactics", "Dodge", "Ill Will", "Peace of Mind",
+                    "Spare", "Incinerate"
+                ],
+                stats: {
+                    hp: 85,
+                    energy: 81,
+                    attack: 49,
+                    defense: 95,
+                    rattack: 120,
+                    rdefense: 95,
+                    speed: 75
+                },
+                gender: ['Male', 'Female'],
+                abilities: ['Disenchant', 'Raging Fire'],
+                secretAbility: 'Devious',
+                weightkg: 8.2,
+                heightcm: 63.5 },
+            { name: 'Malevowax (Raging Fire)', primaryType: 'Fire', secondaryType: 'Spirit', icon: require('../assets/icons/malevowax.png'), specialTypeChart: 'RagingFire' },
+            { name: 'Grievestone', primaryType: 'Earth', secondaryType: 'Spirit', icon: require('../assets/icons/grievestone.png'),
+                moves: [
+                    "Pebble Toss", "Stupefy", "Shriek", "Tamp", "Empathize", "Quicksand", "Spectral Burst", "Dissonant Chord", 
+                    "Scapegoat", "Rock Slide", "Soul Storm", "Body Crash", "Déjà Vu", "Deja Vu", "Splitting Headache",
+                    "Bane of Haste", "Landslide", "Mudslide", "Phantom Slash", "Provoke", "Sap Plant", "Dodge", "Ill Will",
+                    "Mud Spatter", "Peace of Mind", "Spare"
+                ],
+                stats: {
+                    hp: 48,
+                    energy: 43,
+                    attack: 30,
+                    defense: 85,
+                    rattack: 85,
+                    rdefense: 30,
+                    speed: 30
+                },
+                gender: ['Male', 'Female'],
+                abilities: ['Sob', 'Bitter Touch'],
+                secretAbility: 'Seize',
+                weightkg: 85.7,
+                heightcm: 88.9 },
+            { name: 'Obelost', primaryType: 'Earth', secondaryType: 'Spirit', icon: require('../assets/icons/grievestone.png'),
+                moves: [
+                    "Pebble Toss", "Stupefy", "Shriek", "Tamp", "Empathize", "Quicksand", "Spectral Burst", "Dissonant Chord", 
+                    "Scapegoat", "Rock Slide", "Soul Storm", "Body Crash", "Déjà Vu", "Deja Vu", "Splitting Headache",
+                    "Bane of Haste", "Landslide", "Mudslide", "Phantom Slash", "Provoke", "Sap Plant", "Dodge", "Ill Will",
+                    "Mud Spatter", "Peace of Mind", "Spare", "Trick Shot"
+                ],
+                stats: {
+                    hp: 84,
+                    energy: 73,
+                    attack: 50,
+                    defense: 135,
+                    rattack: 135,
+                    rdefense: 50,
+                    speed: 60
+                },
+                gender: ['Male', 'Female'],
+                abilities: ['Wail', 'Bitter Touch'],
+                secretAbility: 'Seize',
+                weightkg: 338.8,
+                heightcm: 218.4 },
         { name: 'Duskit', primaryType: 'Spirit', secondaryType: 'Mind', icon: require('../assets/icons/duskit.png'),
             moves: [
                 "Startle", "Final Ruse", "Brainwash", "Stupefy", "Return to Sender", "Oppress", "Spectral Burst", 
@@ -5955,6 +6103,26 @@ export const loomiansData = [
             secretAbility: 'Incandescent',
             weightkg: 9.5,
             heightcm: 68.6 },
+        { name: 'Nymesis', primaryType: 'Dark', secondaryType: 'Air', icon: require('../assets/icons/nymesis.png'),
+            moves: [
+                "Gust", "Aggravate", "Tail Slap", "Provoke", "Air Whip", "Bamboozle", "Swipe",
+                "Déjà Vu", "Deja Vu", "Air Blade", "High-Pitch Screech", "Shadow Pulse", "Jet Stream", "Pepper Burst",
+                "Perch", "Barter", "Dodge", "Dark Surge",  "Hypnotize", "Peace of Mind", "Spare"
+            ],
+            stats: {
+                hp: 71,
+                energy: 115,
+                attack: 46,
+                defense: 77,
+                rattack: 119,
+                rdefense: 122,
+                speed: 100
+            },
+            gender: ['Male', 'Female'],
+            abilities: ['Impose'],
+            secretAbility: 'Pitch-Black',
+            weightkg: 11.3,
+            heightcm: 94 },
         { name: 'Cosmiore', primaryType: 'Ancient', secondaryType: 'Mind', icon: require('../assets/icons/cosmiore.png'),
             moves: [
                 "Brace", "Confound", "Brainwash", "Bane of Haste", "Spare", "Power Focus", "Cerebral Slash", 
