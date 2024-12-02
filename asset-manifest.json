@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Twiddle/static/css/main.f37a4cdc.css",
-    "main.js": "/Twiddle/static/js/main.74f2c26a.js",
+    "main.js": "/Twiddle/static/js/main.dce25e51.js",
     "static/js/453.00ae8aa6.chunk.js": "/Twiddle/static/js/453.00ae8aa6.chunk.js",
     "static/media/DiscX.png": "/Twiddle/static/media/DiscX.1b0c7dffd9a44b7209fc.png",
     "static/media/DiscCorrect.png": "/Twiddle/static/media/DiscCorrect.f3f93e58b298534cdba7.png",
@@ -12,11 +12,11 @@
     "static/media/ikazune.png": "/Twiddle/static/media/ikazune.28cede64d768ef241261.png",
     "index.html": "/Twiddle/index.html",
     "main.f37a4cdc.css.map": "/Twiddle/static/css/main.f37a4cdc.css.map",
-    "main.74f2c26a.js.map": "/Twiddle/static/js/main.74f2c26a.js.map",
+    "main.dce25e51.js.map": "/Twiddle/static/js/main.dce25e51.js.map",
     "453.00ae8aa6.chunk.js.map": "/Twiddle/static/js/453.00ae8aa6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f37a4cdc.css",
-    "static/js/main.74f2c26a.js"
+    "static/js/main.dce25e51.js"
   ]
 }
